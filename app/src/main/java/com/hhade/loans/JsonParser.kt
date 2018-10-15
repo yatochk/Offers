@@ -1,34 +1,36 @@
 package com.hhade.loans
 
-import org.json.JSONArray
+import org.json.JSONException
 import org.json.JSONObject
 
-const val loans = 0
-const val cards = 1
-const val other = 2
+const val LOANS = 0
+const val CARDS = 1
+const val OTHER = 2
 
 class JsonParser(jsonString: String) {
 
     private var json: JSONObject = JSONObject(jsonString)
 
-    fun getUrlAllOffers(): String {
-        var urlAllOffer = ""
-        if (json.has("urlAllOffer"))
-            urlAllOffer = json.getString("urlAllOffer")
-
-        return urlAllOffer
-    }
+    val url: String
+        get() {
+            var urlAllOffer = ""
+            if (json.has("urlAllOffer"))
+                urlAllOffer = json.getString("urlAllOffer")
+            return urlAllOffer
+        }
 
     fun getOffers(view: Int): ArrayList<Offers> {
         val offers = ArrayList<Offers>()
 
         try {
-            lateinit var jsonArray: JSONArray
-            when (view) {
-                loans -> jsonArray = json.getJSONArray("loansOffers")
-                cards -> jsonArray = json.getJSONArray("cardsOffers")
-                other -> jsonArray = json.getJSONArray("otherOffers")
-            }
+            val jsonArray = json.getJSONArray(
+                    when (view) {
+                        LOANS -> "loansOffers"
+                        CARDS -> "cardsOffers"
+                        OTHER -> "otherOffers"
+                        else -> throw JSONException("Json array not found")
+                    }
+            )
 
             for (i in 0 until jsonArray.length()) {
                 val jsonObject = jsonArray.getJSONObject(i)

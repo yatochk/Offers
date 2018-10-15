@@ -42,23 +42,26 @@ object Controller {
 
     fun openDescriptionView(activity: FragmentActivity, intent: Intent, itemView: View,
                             descriptionMap: LinkedHashMap<String, String>) {
-        if (!isFilterOpened && !isDescriptionOpened) {
-            isDescriptionOpened = true
-            activity.offer_description.visibility = View.VISIBLE
-            activity.offer_description.description_close_button.setOnClickListener {
-                isDescriptionOpened = false
-                activity.offer_description.visibility = View.INVISIBLE
-            }
-            activity.offer_description.description_title.text = itemView.offer_name.text
-            activity.offer_description.description_sum.text = itemView.offer_sum.text
-            activity.offer_description.description_time.text = itemView.offer_time.text
-            activity.offer_description.description_rate.text = itemView.offer_rate.text
-            activity.offer_description.description_icon.setImageDrawable(itemView.offer_icon.drawable)
+        if (isFilterOpened || isDescriptionOpened)
+            return
 
-            activity.offer_description.description_text.movementMethod = ScrollingMovementMethod()
-            activity.offer_description.description_text.text = parseMapToDescription(descriptionMap)
+        isDescriptionOpened = true
+        activity.offer_description.visibility = View.VISIBLE
+        activity.offer_description.description_close_button.setOnClickListener {
+            isDescriptionOpened = false
+            activity.offer_description.visibility = View.INVISIBLE
+        }
+        with(activity.offer_description) {
+            description_title.text = itemView.offer_name.text
+            description_sum.text = itemView.offer_sum.text
+            description_time.text = itemView.offer_time.text
+            description_rate.text = itemView.offer_rate.text
+            description_icon.setImageDrawable(itemView.offer_icon.drawable)
 
-            activity.offer_description.issue_button.setOnClickListener {
+            description_text.movementMethod = ScrollingMovementMethod()
+            description_text.text = parseMapToDescription(descriptionMap)
+
+            issue_button.setOnClickListener {
                 activity.startActivity(intent)
             }
         }
@@ -69,8 +72,7 @@ object Controller {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             map.forEach { t, u ->
-                descriptionText += t + '\n' + '\n'
-                descriptionText += u + '\n' + '\n'
+                descriptionText += "$t\n\n$u\n\n"
             }
         }
 

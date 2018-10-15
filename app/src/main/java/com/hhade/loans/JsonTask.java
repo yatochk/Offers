@@ -60,7 +60,7 @@ class JsonTask extends AsyncTask<Void, Void, String> {
 
         //JsonParser jsonParser = new JsonParser(resultJson);
         JsonParser jsonParser = new JsonParser(urlString);
-        loansFragment.initAdapter(jsonParser.getOffers(0), jsonParser.getUrlAllOffers());
+        loansFragment.initAdapter(jsonParser.getOffers(0), jsonParser.getUrl());
         cardsFragment.initAdapter(jsonParser.getOffers(1));
         otherFragment.initAdapter(jsonParser.getOffers(2));
     }

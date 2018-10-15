@@ -10,32 +10,29 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_header.view.*
 import kotlinx.android.synthetic.main.offers_list_item.view.*
 
+const val TYPE_HEADER = 0
+const val TYPE_ITEM = 1
+
 class RecyclerViewOffersAdapter(val offers: ArrayList<Offers>, private val urlAllOffers: String) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val typeHeader = 0
-    private val typeItem = 1
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        if (viewType == typeItem) {
-            return OffersViewHolder(
-                    LayoutInflater.from(parent.context).inflate(R.layout.offers_list_item, parent,
-                            false)
-            )
-        } else if (viewType == typeHeader && urlAllOffers != "") {
-            return RecycleHeader(
-                    LayoutInflater.from(parent.context).inflate(R.layout.list_header, parent,
-                            false)
-            )
-        }
-
-        throw RuntimeException("There is no type that matches the type $viewType + make sure your using types correctly")
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
+            when {
+                viewType == TYPE_ITEM -> OffersViewHolder(
+                        LayoutInflater.from(parent.context).inflate(R.layout.offers_list_item, parent,
+                                false)
+                )
+                viewType == TYPE_HEADER && urlAllOffers != "" -> RecycleHeader(
+                        LayoutInflater.from(parent.context).inflate(R.layout.list_header, parent,
+                                false)
+                )
+                else -> throw RuntimeException("There is no type that matches the type $viewType + make sure your using types correctly")
+            }
 
     override fun getItemViewType(position: Int): Int {
         if (isPositionHeader(position) && urlAllOffers != "")
-            return typeHeader
+            return TYPE_HEADER
 
-        return typeItem
+        return TYPE_ITEM
     }
 
     override fun getItemCount(): Int = if (urlAllOffers != "") offers.size + 1 else offers.size
@@ -75,9 +72,7 @@ class RecyclerViewOffersAdapter(val offers: ArrayList<Offers>, private val urlAl
         }
     }
 
-    private fun isPositionHeader(position: Int): Boolean {
-        return position == 0
-    }
+    private fun isPositionHeader(position: Int): Boolean = position == 0
 
     class OffersViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     class RecycleHeader(itemView: View) : RecyclerView.ViewHolder(itemView)

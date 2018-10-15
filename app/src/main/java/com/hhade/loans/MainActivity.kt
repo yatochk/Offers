@@ -1,6 +1,5 @@
 package com.hhade.loans
 
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
@@ -11,7 +10,6 @@ import com.hhade.loans.fragments.CardFragment
 import com.hhade.loans.fragments.LoansFragment
 import com.hhade.loans.fragments.OtherFragment
 import kotlinx.android.synthetic.main.activity_main.*
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -55,20 +53,14 @@ class MainActivity : AppCompatActivity() {
                 .add(R.id.fragment_container, otherFragment).hide(otherFragment).commit()
 
         bottom_navigation.setOnNavigationItemSelectedListener {
-            when {
-                it.itemId == R.id.nav_cards -> {
-                    supportFragmentManager.beginTransaction().hide(activeFragment).show(cardsFragment).commit()
-                    activeFragment = cardsFragment
-                }
-                it.itemId == R.id.nav_loans -> {
-                    supportFragmentManager.beginTransaction().hide(activeFragment).show(loansFragment).commit()
-                    activeFragment = loansFragment
-                }
-                it.itemId == R.id.nav_other -> {
-                    supportFragmentManager.beginTransaction().hide(activeFragment).show(otherFragment).commit()
-                    activeFragment = otherFragment
-                }
+            val fragment = when (it.itemId) {
+                R.id.nav_cards -> cardsFragment
+                R.id.nav_loans -> loansFragment
+                R.id.nav_other -> otherFragment
+                else -> throw Exception("Wrong fragment id")
             }
+            supportFragmentManager.beginTransaction().hide(activeFragment).show(fragment).commit()
+            activeFragment = fragment
 
             true
         }
