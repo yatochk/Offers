@@ -1,0 +1,237 @@
+{
+  "urlAllOffer": "https://www.google.com",
+  "loansOffers": [
+    {
+      "name": "Ford",
+      "rating": "4.5",
+      "sum": "от 3000 до 50000 руб",
+      "time": "от 10 до 90 дней",
+      "rate": "от 1% до 5%",
+      "paymentMethod": "all",
+      "url": "https://www.yandex.ru",
+      "image": "http://static2.tinkoff.ru/portal/share/tinkoffru.png",
+      "description": [
+        {
+          "name": "Tariff first",
+          "specification": "exampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        }
+      ]
+    },
+    {
+      "name": "Rocket",
+      "rating": "5",
+      "sum": "900000",
+      "time": "1 год",
+      "rate": "10%",
+      "paymentMethod": "card",
+      "url": "https://www.yandex.ru",
+      "image": "https://s3.amazonaws.com/s3.rocketbank.ru/app/rocketbank.ru-share-530.png",
+      "description": [
+        {
+          "name": "Tariff first",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff third",
+          "specification": "exampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff four",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff five",
+          "specification": "exampletextexampletextexampletextexampletextexampletext"
+        }
+      ]
+    },
+    {
+      "name": "Sber",
+      "rating": "3.5",
+      "sum": "45000",
+      "time": "2 года",
+      "rate": "1%",
+      "paymentMethod": "cash",
+      "url": "https://www.yandex.ru",
+      "image": "https://www.iguides.ru/upload/medialibrary/bad/bad6f4644875de1106e55e447df35c20.png",
+      "description": [
+        {
+          "name": "Tariff first",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletext"
+        }
+      ]
+    },
+    {
+      "name": "Tinkoff",
+      "rating": "4",
+      "sum": "250000",
+      "time": "9 месяцев",
+      "rate": "20%",
+      "paymentMethod": "cash",
+      "url": "https://www.yandex.ru",
+      "image": "http://static2.tinkoff.ru/portal/share/tinkoffru.png",
+      "description": [
+        {
+          "name": "Tariff first",
+          "specification": "exampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletext"
+        }
+      ]
+    },
+    {
+      "name": "Alpha",
+      "rating": "3.5",
+      "sum": "100",
+      "time": "5 месяцев",
+      "rate": "16%",
+      "paymentMethod": "card",
+      "url": "https://www.yandex.ru",
+      "image": "https://im1.kommersant.ru/gboxtexts/sp_com/logos/043.jpg",
+      "description": [
+        {
+          "name": "Tarif first",
+          "specification": "yguignfy43cgnfy734icgny7i4gncfy7in4c7icn7if8b54ovuywgb4ivyu7wb4iovy"
+        },
+        {
+          "name": "Tarif second",
+          "specification": "yguignfy43cgnfy73ytvbj76bj4icgny7i4gncfy7in4c7icn7if8b54ovuywgb4ivyu7wb4iovy"
+        }
+      ]
+    }
+  ],
+  "cardsOffers": [
+    {
+      "name": "Tinkoff",
+      "rating": "4",
+      "sum": "250000",
+      "time": "9 месяцев",
+      "rate": "20%",
+      "paymentMethod": "cash",
+      "url": "https://www.yandex.ru",
+      "image": "http://static2.tinkoff.ru/portal/share/tinkoffru.png",
+      "description": [
+        {
+          "name": "Tariff first",
+          "specification": "exampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletext"
+        }
+      ]
+    }
+  ],
+  "otherOffers": [
+    {
+      "name": "Tinkoff",
+      "rating": "4",
+      "sum": "250000",
+      "time": "9 месяцев",
+      "rate": "20%",
+      "paymentMethod": "cash",
+      "url": "https://www.yandex.ru",
+      "image": "http://static2.tinkoff.ru/portal/share/tinkoffru.png",
+      "description": [
+        {
+          "name": "Tariff first",
+          "specification": "exampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletext"
+        }
+      ]
+    },
+    {
+      "name": "Alpha",
+      "rating": "3.5",
+      "sum": "100",
+      "time": "5 месяцев",
+      "rate": "16%",
+      "paymentMethod": "card",
+      "url": "https://www.yandex.ru",
+      "image": "https://im1.kommersant.ru/gboxtexts/sp_com/logos/043.jpg",
+      "description": [
+        {
+          "name": "Tarif first",
+          "specification": "yguignfy43cgnfy734icgny7i4gncfy7in4c7icn7if8b54ovuywgb4ivyu7wb4iovy"
+        },
+        {
+          "name": "Tarif second",
+          "specification": "yguignfy43cgnfy73ytvbj76bj4icgny7i4gncfy7in4c7icn7if8b54ovuywgb4ivyu7wb4iovy"
+        }
+      ]
+    },
+    {
+      "name": "Rocket",
+      "rating": "5",
+      "sum": "900000",
+      "time": "1 год",
+      "rate": "10%",
+      "paymentMethod": "card",
+      "url": "https://www.yandex.ru",
+      "image": "https://s3.amazonaws.com/s3.rocketbank.ru/app/rocketbank.ru-share-530.png",
+      "description": [
+        {
+          "name": "Tariff first",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff second",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff third",
+          "specification": "exampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff four",
+          "specification": "exampletextexampletextexampletextexampletextexampletextexampletextexampletextexampletext"
+        },
+        {
+          "name": "Tariff five",
+          "specification": "exampletextexampletextexampletextexampletextexampletext"
+        }
+      ]
+    }
+  ]
+}
